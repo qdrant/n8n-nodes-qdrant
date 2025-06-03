@@ -42,7 +42,7 @@ export const retrievePointsFields: INodeProperties[] = [
 	{
 		displayName: 'With Payload',
 		name: 'withPayload',
-		hint: 'Select which payload to return with the response',
+		hint: 'Whether to include payload in the response',
 		default: true,
 		type: 'boolean',
 		required: false,

@@ -206,7 +206,7 @@ export const queryPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Shard Key',
 		name: 'shardKey',
-		hint: 'Shard key to use for the operation. Can be string, number, or list of strings/numbers',
+		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
 		default: 'null',
 		type: 'json',
 		required: false,

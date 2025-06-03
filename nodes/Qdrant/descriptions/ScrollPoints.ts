@@ -14,7 +14,7 @@ export const scrollPointsOperation: INodePropertyOptions = {
 				offset: '={{$parameter.offset}}',
 				limit: '={{$parameter.limit}}',
 				filter: '={{JSON.parse($parameter.filter)}}',
-				with_payload: '={{JSON.parse($parameter.withPayload)}}',
+				with_payload: '={{$parameter.withPayload}}',
 				with_vector: '={{$parameter.withVector}}',
 				order_by: '={{JSON.parse($parameter.orderBy)}}',
 				shard_key: '={{JSON.parse($parameter.shardKey)}}',
@@ -71,9 +71,9 @@ export const scrollPointsFields: INodeProperties[] = [
 	{
 		displayName: 'With Payload',
 		name: 'withPayload',
-		hint: 'Select which payload to return with the response. Can be boolean, list of strings, or object',
-		default: 'true',
-		type: 'json',
+		hint: 'Whether to include payload in the response',
+		default: true,
+		type: 'boolean',
 		required: false,
 		displayOptions: {
 			show: {
