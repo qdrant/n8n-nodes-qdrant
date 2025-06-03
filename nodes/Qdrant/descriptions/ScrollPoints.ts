@@ -11,7 +11,8 @@ export const scrollPointsOperation: INodePropertyOptions = {
 			method: 'POST',
 			url: '=/collections/{{$parameter.collectionName}}/points/scroll',
 			body: {
-				offset: '={{$parameter.offset}}',
+				offset:
+					'={{isNaN(Number($parameter.offset)) ?  $parameter.offset : Number($parameter.offset)}}',
 				limit: '={{$parameter.limit}}',
 				filter: '={{JSON.parse($parameter.filter)}}',
 				with_payload: '={{$parameter.withPayload}}',
@@ -29,19 +30,6 @@ export const scrollPointsOperation: INodePropertyOptions = {
 
 export const scrollPointsFields: INodeProperties[] = [
 	collectionNameField('scrollPoints'),
-	{
-		displayName: 'Offset',
-		name: 'offset',
-		hint: 'Start ID to read points from',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['scrollPoints'],
-			},
-		},
-	},
 	{
 		displayName: 'Limit',
 		name: 'limit',
@@ -87,6 +75,19 @@ export const scrollPointsFields: INodeProperties[] = [
 		hint: 'Whether to include vectors in the response',
 		default: false,
 		type: 'boolean',
+		required: false,
+		displayOptions: {
+			show: {
+				operation: ['scrollPoints'],
+			},
+		},
+	},
+	{
+		displayName: 'Offset',
+		name: 'offset',
+		hint: 'Start ID to read points from.',
+		default: null,
+		type: 'string',
 		required: false,
 		displayOptions: {
 			show: {

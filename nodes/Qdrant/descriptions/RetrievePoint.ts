@@ -9,7 +9,7 @@ export const retrievePointOperation: INodePropertyOptions = {
 	routing: {
 		request: {
 			method: 'GET',
-			url: '=/collections/{{$parameter.collectionName}}/points/{{$parameter.id}}',
+			url: '=/collections/{{$parameter.collectionName}}/points/{{isNaN(Number($parameter.id)) ?  $parameter.id : Number($parameter.id)}}',
 		},
 	},
 };
