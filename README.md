@@ -59,9 +59,7 @@ The node supports the following operations:
 
 To use this node, you need to set up Qdrant credentials:
 
-The credentials include:
-
-- URL: The endpoint URL of your Qdrant instance
+- URL: The REST URL of your Qdrant instance
 - API Key (optional): Your Qdrant API key if authentication is enabled
 
 ## Compatibility

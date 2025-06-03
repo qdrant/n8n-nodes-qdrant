@@ -1,5 +1,5 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField } from './Commons';
+import { collectionNameField, orderingField } from './Commons';
 
 export const deletePointsOperation: INodePropertyOptions = {
 	name: 'Delete Points',
@@ -77,31 +77,5 @@ export const deletePointsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Ordering',
-		name: 'ordering',
-		hint: 'Define ordering guarantees for the operation',
-		type: 'options',
-		options: [
-			{
-				name: 'Weak',
-				value: 'weak',
-			},
-			{
-				name: 'Medium',
-				value: 'medium',
-			},
-			{
-				name: 'Strong',
-				value: 'strong',
-			},
-		],
-		default: 'weak',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['deletePoints'],
-			},
-		},
-	},
+	orderingField('deletePoints'),
 ];

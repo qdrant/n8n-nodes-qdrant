@@ -1,5 +1,5 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField } from './Commons';
+import { collectionNameField, orderingField } from './Commons';
 
 export const overwritePayloadOperation: INodePropertyOptions = {
 	name: 'Overwrite Payload',
@@ -105,31 +105,5 @@ export const overwritePayloadFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Ordering',
-		name: 'ordering',
-		hint: 'Define ordering guarantees for the operation',
-		type: 'options',
-		options: [
-			{
-				name: 'Weak',
-				value: 'weak',
-			},
-			{
-				name: 'Medium',
-				value: 'medium',
-			},
-			{
-				name: 'Strong',
-				value: 'strong',
-			},
-		],
-		default: 'weak',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['overwritePayload'],
-			},
-		},
-	},
+	orderingField('overwritePayload'),
 ];
