@@ -15,3 +15,33 @@ export const collectionNameField = (showOperation: string): INodeProperties => {
 		hint: 'Name of the collection',
 	};
 };
+
+export const orderingField = (showOperation: string): INodeProperties => {
+	return {
+		displayName: 'Ordering',
+		name: 'ordering',
+		hint: 'Define ordering guarantees for the operation',
+		type: 'options',
+		options: [
+			{
+				name: 'Weak',
+				value: 'weak',
+			},
+			{
+				name: 'Medium',
+				value: 'medium',
+			},
+			{
+				name: 'Strong',
+				value: 'strong',
+			},
+		],
+		default: 'weak',
+		required: false,
+		displayOptions: {
+			show: {
+				operation: [showOperation],
+			},
+		},
+	};
+};
