@@ -20,7 +20,7 @@ export const orderingField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'Ordering',
 		name: 'ordering',
-		hint: 'Define ordering guarantees for the operation',
+		hint: 'Defines ordering guarantees for the operation',
 		type: 'options',
 		options: [
 			{
