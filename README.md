@@ -18,6 +18,7 @@ The node supports the following operations:
 
 - [List Collections](https://api.qdrant.tech/v-1-14-x/api-reference/collections/get-collections) - List all collections in the Qdrant instance
 - [Create Collection](https://api.qdrant.tech/v-1-14-x/api-reference/collections/create-collection) - Create a new collection with specified vector parameters
+- [Update Collection](https://api.qdrant.tech/v-1-14-x/api-reference/collections/update-collection) - Update parameters of an existing collection
 - [Get Collection](https://api.qdrant.tech/v-1-14-x/api-reference/collections/get-collection) - Get information about a specific collection
 - [Collection Exists](https://api.qdrant.tech/v-1-14-x/api-reference/collections/collection-exists) - Check if a collection exists
 - [Delete Collection](https://api.qdrant.tech/v-1-14-x/api-reference/collections/delete-collection) - Delete a collection
