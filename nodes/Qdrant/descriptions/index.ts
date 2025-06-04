@@ -4,6 +4,7 @@ export * from './RetrievePoint';
 export * from './GetCollection';
 export * from './CollectionExists';
 export * from './CreateCollection';
+export * from './UpdateCollection';
 export * from './QueryPoints';
 export * from './QueryBatchPoints';
 export * from './QueryPointsGroups';
