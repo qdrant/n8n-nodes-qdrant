@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-qdrant",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Official n8n node to interface with the Qdrant - https://qdrant.tech",
   "keywords": [
     "n8n-community-node-package"
@@ -46,8 +46,5 @@
   },
   "peerDependencies": {
     "n8n-workflow": "*"
-  },
-  "dependencies": {
-    "axios": "^1.6.0"
   }
 }
