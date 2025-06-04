@@ -66,7 +66,7 @@ export class Qdrant implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["operation"]}}',
-		description: 'Node to interface with the Qdrant Vector Database',
+		description: 'Official n8n node to interface with the Qdrant - https://qdrant.tech',
 		defaults: {
 			name: 'Qdrant',
 		},
