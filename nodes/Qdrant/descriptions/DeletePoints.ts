@@ -1,5 +1,11 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField, orderingField } from './Commons';
+import {
+	collectionNameField,
+	filterField,
+	shardKeyField,
+	waitField,
+	orderingField,
+} from './Commons';
 
 export const deletePointsOperation: INodePropertyOptions = {
 	name: 'Delete Points',
@@ -38,44 +44,8 @@ export const deletePointsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Filter',
-		name: 'filter',
-		hint: 'Filter to select points to delete',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['deletePoints'],
-			},
-		},
-	},
-	{
-		displayName: 'Shard Key',
-		name: 'shardKey',
-		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['deletePoints'],
-			},
-		},
-	},
-	{
-		displayName: 'Wait',
-		name: 'wait',
-		hint: 'If true, wait for changes to actually happen',
-		default: true,
-		type: 'boolean',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['deletePoints'],
-			},
-		},
-	},
+	filterField('deletePoints'),
+	shardKeyField('deletePoints'),
+	waitField('deletePoints'),
 	orderingField('deletePoints'),
 ];

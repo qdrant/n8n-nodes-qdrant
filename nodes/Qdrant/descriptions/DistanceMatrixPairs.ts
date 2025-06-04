@@ -1,5 +1,11 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField } from './Commons';
+import {
+	collectionNameField,
+	filterField,
+	shardKeyField,
+	consistencyField,
+	timeoutField,
+} from './Commons';
 
 export const matrixPairsOperation: INodePropertyOptions = {
 	name: 'Matrix Pairs',
@@ -28,19 +34,7 @@ export const matrixPairsOperation: INodePropertyOptions = {
 
 export const matrixPairsFields: INodeProperties[] = [
 	collectionNameField('matrixPairs'),
-	{
-		displayName: 'Filter',
-		name: 'filter',
-		hint: 'Look only for points which satisfies these conditions',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['matrixPairs'],
-			},
-		},
-	},
+	filterField('matrixPairs'),
 	{
 		displayName: 'Sample',
 		name: 'sample',
@@ -80,43 +74,7 @@ export const matrixPairsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Shard Key',
-		name: 'shardKey',
-		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['matrixPairs'],
-			},
-		},
-	},
-	{
-		displayName: 'Consistency',
-		name: 'consistency',
-		hint: 'Define read consistency guarantees for the operation',
-		default: 'majority',
-		type: 'string',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['matrixPairs'],
-			},
-		},
-	},
-	{
-		displayName: 'Timeout',
-		name: 'timeout',
-		hint: 'If set, overrides global timeout for this request. Unit is seconds',
-		default: 100,
-		type: 'number',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['matrixPairs'],
-			},
-		},
-	},
+	shardKeyField('matrixPairs'),
+	consistencyField('matrixPairs'),
+	timeoutField('matrixPairs'),
 ];

@@ -1,5 +1,13 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField } from './Commons';
+import {
+	collectionNameField,
+	filterField,
+	withPayloadField,
+	withVectorField,
+	shardKeyField,
+	consistencyField,
+	timeoutField,
+} from './Commons';
 
 export const queryPointsOperation: INodePropertyOptions = {
 	name: 'Query Points',
@@ -86,32 +94,8 @@ export const queryPointsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'With Vector',
-		name: 'withVector',
-		hint: 'Whether to include in the response.',
-		default: false,
-		type: 'boolean',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPoints'],
-			},
-		},
-	},
-	{
-		displayName: 'With Payload',
-		name: 'withPayload',
-		hint: 'Whether to include payload in the response',
-		default: true,
-		type: 'boolean',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPoints'],
-			},
-		},
-	},
+	withVectorField('queryPoints'),
+	withPayloadField('queryPoints'),
 	{
 		displayName: 'Using',
 		name: 'using',
@@ -125,19 +109,7 @@ export const queryPointsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Filter',
-		name: 'filter',
-		hint: 'Return only those points that satisfy the specified conditions',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPoints'],
-			},
-		},
-	},
+	filterField('queryPoints'),
 	{
 		displayName: 'Prefetch',
 		name: 'prefetch',
@@ -177,43 +149,7 @@ export const queryPointsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Consistency',
-		name: 'consistency',
-		hint: 'Define read consistency guarantees for the operation',
-		default: 'majority',
-		type: 'string',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPoints'],
-			},
-		},
-	},
-	{
-		displayName: 'Timeout',
-		name: 'timeout',
-		hint: 'If set, overrides global timeout for this request. Unit is seconds',
-		default: 100,
-		type: 'number',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPoints'],
-			},
-		},
-	},
-	{
-		displayName: 'Shard Key',
-		name: 'shardKey',
-		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPoints'],
-			},
-		},
-	},
+	consistencyField('queryPoints'),
+	timeoutField('queryPoints'),
+	shardKeyField('queryPoints'),
 ];

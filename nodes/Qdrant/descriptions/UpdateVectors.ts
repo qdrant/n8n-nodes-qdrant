@@ -1,5 +1,5 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField, orderingField } from './Commons';
+import { collectionNameField, orderingField, shardKeyField, waitField } from './Commons';
 
 export const updateVectorsOperation: INodePropertyOptions = {
 	name: 'Update Vectors',
@@ -37,31 +37,7 @@ export const updateVectorsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Shard Key',
-		name: 'shardKey',
-		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['updateVectors'],
-			},
-		},
-	},
-	{
-		displayName: 'Wait',
-		name: 'wait',
-		hint: 'If true, wait for changes to actually happen',
-		default: true,
-		type: 'boolean',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['updateVectors'],
-			},
-		},
-	},
+	shardKeyField('updateVectors'),
+	waitField('updateVectors'),
 	orderingField('updateVectors'),
 ];

@@ -1,5 +1,5 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField } from './Commons';
+import { collectionNameField, filterField, shardKeyField, timeoutField } from './Commons';
 
 export const countPointsOperation: INodePropertyOptions = {
 	name: 'Count Points',
@@ -24,19 +24,7 @@ export const countPointsOperation: INodePropertyOptions = {
 
 export const countPointsFields: INodeProperties[] = [
 	collectionNameField('countPoints'),
-	{
-		displayName: 'Filter',
-		name: 'filter',
-		hint: 'Look only for points which satisfies these conditions',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['countPoints'],
-			},
-		},
-	},
+	filterField('countPoints'),
 	{
 		displayName: 'Exact',
 		name: 'exact',
@@ -50,30 +38,6 @@ export const countPointsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Shard Key',
-		name: 'shardKey',
-		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['countPoints'],
-			},
-		},
-	},
-	{
-		displayName: 'Timeout',
-		name: 'timeout',
-		hint: 'If set, overrides global timeout for this request. Unit is seconds',
-		default: 100,
-		type: 'number',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['countPoints'],
-			},
-		},
-	},
+	shardKeyField('countPoints'),
+	timeoutField('countPoints'),
 ];

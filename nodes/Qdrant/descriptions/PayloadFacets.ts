@@ -1,5 +1,11 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField } from './Commons';
+import {
+	collectionNameField,
+	filterField,
+	shardKeyField,
+	consistencyField,
+	timeoutField,
+} from './Commons';
 
 export const payloadFacetsOperation: INodePropertyOptions = {
 	name: 'Payload Facets',
@@ -40,19 +46,7 @@ export const payloadFacetsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Filter',
-		name: 'filter',
-		hint: 'Filter conditions - only consider points that satisfy these conditions',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['payloadFacets'],
-			},
-		},
-	},
+	filterField('payloadFacets'),
 	{
 		displayName: 'Limit',
 		name: 'limit',
@@ -79,43 +73,7 @@ export const payloadFacetsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Shard Key',
-		name: 'shardKey',
-		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['payloadFacets'],
-			},
-		},
-	},
-	{
-		displayName: 'Consistency',
-		name: 'consistency',
-		hint: 'Define read consistency guarantees for the operation',
-		default: 'majority',
-		type: 'string',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['payloadFacets'],
-			},
-		},
-	},
-	{
-		displayName: 'Timeout',
-		name: 'timeout',
-		hint: 'If set, overrides global timeout for this request. Unit is seconds',
-		default: 100,
-		type: 'number',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['payloadFacets'],
-			},
-		},
-	},
+	shardKeyField('payloadFacets'),
+	consistencyField('payloadFacets'),
+	timeoutField('payloadFacets'),
 ];

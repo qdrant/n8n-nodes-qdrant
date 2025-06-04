@@ -1,5 +1,5 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField, orderingField } from './Commons';
+import { collectionNameField, orderingField, waitField } from './Commons';
 
 export const batchUpdatePointsOperation: INodePropertyOptions = {
 	name: 'Batch Update Points',
@@ -36,18 +36,6 @@ export const batchUpdatePointsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Wait',
-		name: 'wait',
-		hint: 'If true, wait for changes to actually happen',
-		default: true,
-		type: 'boolean',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['batchUpdatePoints'],
-			},
-		},
-	},
+	waitField('batchUpdatePoints'),
 	orderingField('batchUpdatePoints'),
 ];
