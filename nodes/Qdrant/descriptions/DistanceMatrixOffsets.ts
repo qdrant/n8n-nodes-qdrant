@@ -67,7 +67,7 @@ export const matrixOffsetsFields: INodeProperties[] = [
 		displayName: 'Using',
 		name: 'using',
 		hint: 'Define which vector name to use for querying. If missing, the default vector is used',
-		default: 'null',
+		default: '',
 		type: 'string',
 		displayOptions: {
 			show: {

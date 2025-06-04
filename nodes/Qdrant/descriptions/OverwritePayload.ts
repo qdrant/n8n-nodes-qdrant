@@ -63,7 +63,7 @@ export const overwritePayloadFields: INodeProperties[] = [
 		displayName: 'Key',
 		name: 'key',
 		hint: 'Assigns payload to each point that satisfy this path of property',
-		default: 'null',
+		default: '',
 		type: 'string',
 		displayOptions: {
 			show: {

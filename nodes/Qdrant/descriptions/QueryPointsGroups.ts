@@ -73,7 +73,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 		displayName: 'Using',
 		name: 'using',
 		hint: 'Define which vector name to use for querying',
-		default: 'null',
+		default: '',
 		type: 'string',
 		displayOptions: {
 			show: {

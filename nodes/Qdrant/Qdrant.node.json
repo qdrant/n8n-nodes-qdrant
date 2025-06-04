@@ -6,12 +6,12 @@
 	"resources": {
 		"credentialDocumentation": [
 			{
-				"url": ""
+				"url": "https://qdrant.tech/documentation/cloud/authentication/"
 			}
 		],
 		"primaryDocumentation": [
 			{
-				"url": ""
+				"url": "http://api.qdrant.tech/"
 			}
 		]
 	}
