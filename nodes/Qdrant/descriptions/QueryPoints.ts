@@ -59,9 +59,8 @@ export const queryPointsFields: INodeProperties[] = [
 		displayName: 'Score Threshold',
 		name: 'scoreThreshold',
 		hint: 'Return points with scores better than this threshold',
-		default: 'null',
+		default: 0,
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPoints'],
@@ -72,9 +71,12 @@ export const queryPointsFields: INodeProperties[] = [
 		displayName: 'Limit',
 		name: 'limit',
 		hint: 'Max number of points to return',
-		default: 10,
+		default: 50,
 		type: 'number',
-		required: false,
+		typeOptions: {
+			minValue: 1,
+		},
+		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
 				operation: ['queryPoints'],
@@ -87,7 +89,6 @@ export const queryPointsFields: INodeProperties[] = [
 		hint: 'Offset of the result. Skip this many points',
 		default: 0,
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPoints'],
@@ -102,7 +103,6 @@ export const queryPointsFields: INodeProperties[] = [
 		hint: 'Define which vector name to use for querying',
 		default: 'null',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPoints'],
@@ -116,7 +116,6 @@ export const queryPointsFields: INodeProperties[] = [
 		hint: 'Sub-requests to perform first. If present, the query will be performed on the results of the prefetch(es)',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPoints'],
@@ -129,7 +128,6 @@ export const queryPointsFields: INodeProperties[] = [
 		hint: 'Search params for when there is no prefetch',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPoints'],
@@ -142,7 +140,6 @@ export const queryPointsFields: INodeProperties[] = [
 		hint: 'The location to use for IDs lookup',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPoints'],

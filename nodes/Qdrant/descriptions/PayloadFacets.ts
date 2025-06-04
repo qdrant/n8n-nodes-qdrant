@@ -51,9 +51,12 @@ export const payloadFacetsFields: INodeProperties[] = [
 		displayName: 'Limit',
 		name: 'limit',
 		hint: 'Max number of hits to return',
-		default: 10,
+		default: 50,
 		type: 'number',
-		required: false,
+		typeOptions: {
+			minValue: 1,
+		},
+		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
 				operation: ['payloadFacets'],
@@ -66,7 +69,6 @@ export const payloadFacetsFields: INodeProperties[] = [
 		hint: 'Whether to do a more expensive exact count for each of the values in the facet',
 		default: false,
 		type: 'boolean',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['payloadFacets'],

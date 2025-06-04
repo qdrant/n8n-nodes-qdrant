@@ -31,7 +31,6 @@ export const countPointsFields: INodeProperties[] = [
 		hint: 'If true, count exact number of points. If false, count approximate number of points faster. Approximate count might be unreliable during the indexing process',
 		default: true,
 		type: 'boolean',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['countPoints'],

@@ -42,9 +42,12 @@ export const scrollPointsFields: INodeProperties[] = [
 		displayName: 'Limit',
 		name: 'limit',
 		hint: 'Page size',
-		default: 10,
+		default: 50,
 		type: 'number',
-		required: false,
+		typeOptions: {
+			minValue: 1,
+		},
+		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
 				operation: ['scrollPoints'],
@@ -58,9 +61,8 @@ export const scrollPointsFields: INodeProperties[] = [
 		displayName: 'Offset',
 		name: 'offset',
 		hint: 'Start ID to read points from.',
-		default: null,
+		default: '',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['scrollPoints'],
@@ -73,7 +75,6 @@ export const scrollPointsFields: INodeProperties[] = [
 		hint: 'Order the records by a payload field',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['scrollPoints'],

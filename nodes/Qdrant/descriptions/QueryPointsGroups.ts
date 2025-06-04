@@ -63,7 +63,6 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 		hint: 'Query to perform. Can be a vector, ID, or complex query object',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPointsGroups'],
@@ -76,7 +75,6 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 		hint: 'Define which vector name to use for querying',
 		default: 'null',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPointsGroups'],
@@ -90,7 +88,6 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 		hint: 'Search params for when there is no prefetch',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPointsGroups'],
@@ -103,7 +100,6 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 		hint: 'Return points with scores better than this threshold',
 		default: null,
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPointsGroups'],
@@ -118,7 +114,6 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 		hint: 'The location to use for IDs lookup',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPointsGroups'],
@@ -131,7 +126,6 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 		hint: 'Maximum amount of points to return per group',
 		default: 3,
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPointsGroups'],
@@ -142,9 +136,12 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 		displayName: 'Limit',
 		name: 'limit',
 		hint: 'Maximum amount of groups to return',
-		default: 10,
+		default: 50,
 		type: 'number',
-		required: false,
+		typeOptions: {
+			minValue: 1,
+		},
+		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
 				operation: ['queryPointsGroups'],
@@ -157,7 +154,6 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 		hint: 'Look for points in another collection using the group ids',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPointsGroups'],
@@ -170,7 +166,6 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 		hint: 'Sub-requests to perform first. If present, the query will be performed on the results of the prefetch(es)',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['queryPointsGroups'],

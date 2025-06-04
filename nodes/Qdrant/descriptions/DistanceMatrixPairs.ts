@@ -41,7 +41,6 @@ export const matrixPairsFields: INodeProperties[] = [
 		hint: 'How many points to select and search within',
 		default: 10,
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['matrixPairs'],
@@ -52,9 +51,12 @@ export const matrixPairsFields: INodeProperties[] = [
 		displayName: 'Limit',
 		name: 'limit',
 		hint: 'How many neighbours per sample to find',
-		default: 3,
+		default: 50,
 		type: 'number',
-		required: false,
+		typeOptions: {
+			minValue: 1,
+		},
+		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
 				operation: ['matrixPairs'],
@@ -67,7 +69,6 @@ export const matrixPairsFields: INodeProperties[] = [
 		hint: 'Define which vector name to use for querying. If missing, the default vector is used',
 		default: 'null',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['matrixPairs'],

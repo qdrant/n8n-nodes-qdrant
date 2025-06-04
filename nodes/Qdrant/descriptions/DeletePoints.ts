@@ -37,7 +37,6 @@ export const deletePointsFields: INodeProperties[] = [
 		hint: 'List of point IDs to delete',
 		default: '[]',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['deletePoints'],

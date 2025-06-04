@@ -37,7 +37,6 @@ export const orderingField = (showOperation: string): INodeProperties => {
 			},
 		],
 		default: 'weak',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: [showOperation],
@@ -53,7 +52,6 @@ export const filterField = (showOperation: string): INodeProperties => {
 		hint: 'Only select points which satisfies these conditions',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: [showOperation],
@@ -69,7 +67,6 @@ export const withPayloadField = (showOperation: string): INodeProperties => {
 		hint: 'Whether to include payload in the response',
 		default: true,
 		type: 'boolean',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: [showOperation],
@@ -85,7 +82,6 @@ export const withVectorField = (showOperation: string): INodeProperties => {
 		hint: 'Whether to include vectors in the response',
 		default: false,
 		type: 'boolean',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: [showOperation],
@@ -101,7 +97,6 @@ export const shardKeyField = (showOperation: string): INodeProperties => {
 		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: [showOperation],
@@ -117,7 +112,6 @@ export const consistencyField = (showOperation: string): INodeProperties => {
 		hint: 'Define read consistency guarantees for the operation',
 		default: 'majority',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: [showOperation],
@@ -133,7 +127,6 @@ export const timeoutField = (showOperation: string): INodeProperties => {
 		hint: 'If set, overrides global timeout for this request. Unit is seconds',
 		default: 100,
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: [showOperation],
@@ -149,7 +142,6 @@ export const waitField = (showOperation: string): INodeProperties => {
 		hint: 'If true, wait for changes to actually happen',
 		default: true,
 		type: 'boolean',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: [showOperation],

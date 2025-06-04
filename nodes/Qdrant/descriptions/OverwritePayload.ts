@@ -52,7 +52,6 @@ export const overwritePayloadFields: INodeProperties[] = [
 		hint: 'List of point IDs to overwrite payload for',
 		default: '[]',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['overwritePayload'],
@@ -66,7 +65,6 @@ export const overwritePayloadFields: INodeProperties[] = [
 		hint: 'Assigns payload to each point that satisfy this path of property',
 		default: 'null',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['overwritePayload'],

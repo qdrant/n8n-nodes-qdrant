@@ -119,7 +119,7 @@ export class Qdrant implements INodeType {
 					createPayloadIndexOperation,
 					deletePayloadIndexOperation,
 				],
-				default: 'listCollections',
+				default: '',
 			},
 			...listCollectionsFields,
 			...deleteCollectionFields,

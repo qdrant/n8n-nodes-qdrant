@@ -50,7 +50,6 @@ export const createCollectionFields: INodeProperties[] = [
 		hint: 'Number of shards in collection',
 		default: null,
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],
@@ -61,9 +60,8 @@ export const createCollectionFields: INodeProperties[] = [
 		displayName: 'Sharding Method',
 		name: 'shardingMethod',
 		hint: 'Sharding method to use. "auto" or "custom". Defaults to "auto"',
-		default: null,
+		default: '',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],
@@ -76,7 +74,6 @@ export const createCollectionFields: INodeProperties[] = [
 		hint: 'Number of shards replicas. Default is 1 Minimum is 1',
 		default: null,
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],
@@ -89,7 +86,6 @@ export const createCollectionFields: INodeProperties[] = [
 		hint: 'Defines how many replicas should apply the operation for us to consider it successful.',
 		default: null,
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],
@@ -100,9 +96,8 @@ export const createCollectionFields: INodeProperties[] = [
 		displayName: 'On Disk Payload',
 		name: 'onDiskPayload',
 		hint: 'If true - point’s payload will not be stored in memory. It will be read from the disk every time it is requested.',
-		default: null,
+		default: false,
 		type: 'boolean',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],
@@ -115,7 +110,6 @@ export const createCollectionFields: INodeProperties[] = [
 		hint: 'Custom params for HNSW index.',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],
@@ -128,7 +122,6 @@ export const createCollectionFields: INodeProperties[] = [
 		hint: 'Custom params for WAL.',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],
@@ -141,7 +134,6 @@ export const createCollectionFields: INodeProperties[] = [
 		hint: 'Custom params for Optimizers.',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],
@@ -154,7 +146,6 @@ export const createCollectionFields: INodeProperties[] = [
 		hint: 'Specify other collection to copy data from.',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],
@@ -167,7 +158,6 @@ export const createCollectionFields: INodeProperties[] = [
 		hint: 'Quantization parameters. If none - quantization is disabled.',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],
@@ -180,7 +170,6 @@ export const createCollectionFields: INodeProperties[] = [
 		hint: 'Sparse vector parameters of the collection',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],
@@ -193,7 +182,6 @@ export const createCollectionFields: INodeProperties[] = [
 		hint: 'Strict mode configuration of the collection.',
 		default: 'null',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],

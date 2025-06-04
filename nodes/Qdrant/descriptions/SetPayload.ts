@@ -52,7 +52,6 @@ export const setPayloadFields: INodeProperties[] = [
 		hint: 'List of point IDs to set payload for',
 		default: '[]',
 		type: 'json',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['setPayload'],
@@ -66,7 +65,6 @@ export const setPayloadFields: INodeProperties[] = [
 		hint: 'Assigns payload to each point that satisfy this path of property',
 		default: '',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['setPayload'],
