@@ -1,5 +1,11 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField, orderingField } from './Commons';
+import {
+	collectionNameField,
+	filterField,
+	orderingField,
+	shardKeyField,
+	waitField,
+} from './Commons';
 
 export const deletePayloadOperation: INodePropertyOptions = {
 	name: 'Delete Payload',
@@ -52,44 +58,8 @@ export const deletePayloadFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Filter',
-		name: 'filter',
-		hint: 'Filter to select points to delete payload keys from',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['deletePayload'],
-			},
-		},
-	},
-	{
-		displayName: 'Shard Key',
-		name: 'shardKey',
-		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['deletePayload'],
-			},
-		},
-	},
-	{
-		displayName: 'Wait',
-		name: 'wait',
-		hint: 'If true, wait for changes to actually happen',
-		default: true,
-		type: 'boolean',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['deletePayload'],
-			},
-		},
-	},
+	filterField('deletePayload'),
+	shardKeyField('deletePayload'),
+	waitField('deletePayload'),
 	orderingField('deletePayload'),
 ];

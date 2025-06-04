@@ -1,5 +1,5 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField } from './Commons';
+import { collectionNameField, consistencyField, timeoutField } from './Commons';
 
 export const queryBatchPointsOperation: INodePropertyOptions = {
 	name: 'Query Batch Points',
@@ -36,30 +36,6 @@ export const queryBatchPointsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Consistency',
-		name: 'consistency',
-		hint: 'Define read consistency guarantees for the operation',
-		default: 'majority',
-		type: 'string',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryBatchPoints'],
-			},
-		},
-	},
-	{
-		displayName: 'Timeout',
-		name: 'timeout',
-		hint: 'If set, overrides global timeout for this request. Unit is seconds',
-		default: 100,
-		type: 'number',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryBatchPoints'],
-			},
-		},
-	},
+	consistencyField('queryBatchPoints'),
+	timeoutField('queryBatchPoints'),
 ];

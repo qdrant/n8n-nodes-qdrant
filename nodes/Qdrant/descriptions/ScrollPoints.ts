@@ -1,5 +1,13 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField } from './Commons';
+import {
+	collectionNameField,
+	filterField,
+	withPayloadField,
+	withVectorField,
+	shardKeyField,
+	consistencyField,
+	timeoutField,
+} from './Commons';
 
 export const scrollPointsOperation: INodePropertyOptions = {
 	name: 'Scroll Points',
@@ -43,45 +51,9 @@ export const scrollPointsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Filter',
-		name: 'filter',
-		hint: 'Look only for points which satisfies these conditions. If not provided - all points',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['scrollPoints'],
-			},
-		},
-	},
-	{
-		displayName: 'With Payload',
-		name: 'withPayload',
-		hint: 'Whether to include payload in the response',
-		default: true,
-		type: 'boolean',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['scrollPoints'],
-			},
-		},
-	},
-	{
-		displayName: 'With Vector',
-		name: 'withVector',
-		hint: 'Whether to include vectors in the response',
-		default: false,
-		type: 'boolean',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['scrollPoints'],
-			},
-		},
-	},
+	filterField('scrollPoints'),
+	withPayloadField('scrollPoints'),
+	withVectorField('scrollPoints'),
 	{
 		displayName: 'Offset',
 		name: 'offset',
@@ -108,43 +80,7 @@ export const scrollPointsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Shard Key',
-		name: 'shardKey',
-		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['scrollPoints'],
-			},
-		},
-	},
-	{
-		displayName: 'Consistency',
-		name: 'consistency',
-		hint: 'Define read consistency guarantees for the operation',
-		default: 'majority',
-		type: 'string',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['scrollPoints'],
-			},
-		},
-	},
-	{
-		displayName: 'Timeout',
-		name: 'timeout',
-		hint: 'If set, overrides global timeout for this request. Unit is seconds',
-		default: 100,
-		type: 'number',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['scrollPoints'],
-			},
-		},
-	},
+	shardKeyField('scrollPoints'),
+	consistencyField('scrollPoints'),
+	timeoutField('scrollPoints'),
 ];

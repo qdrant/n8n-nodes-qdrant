@@ -1,5 +1,13 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField } from './Commons';
+import {
+	collectionNameField,
+	consistencyField,
+	filterField,
+	shardKeyField,
+	timeoutField,
+	withPayloadField,
+	withVectorField,
+} from './Commons';
 
 export const queryPointsGroupsOperation: INodePropertyOptions = {
 	name: 'Query Points Groups',
@@ -75,19 +83,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Filter',
-		name: 'filter',
-		hint: 'Filter conditions - return only those points that satisfy the specified conditions',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPointsGroups'],
-			},
-		},
-	},
+	filterField('queryPointsGroups'),
 	{
 		displayName: 'Params',
 		name: 'params',
@@ -114,32 +110,8 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'With Vector',
-		name: 'withVector',
-		hint: 'Options for specifying which vectors to include into the response',
-		default: false,
-		type: 'boolean',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPointsGroups'],
-			},
-		},
-	},
-	{
-		displayName: 'With Payload',
-		name: 'withPayload',
-		hint: 'Whether to include payload in the response',
-		default: true,
-		type: 'boolean',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPointsGroups'],
-			},
-		},
-	},
+	withVectorField('queryPointsGroups'),
+	withPayloadField('queryPointsGroups'),
 	{
 		displayName: 'Lookup From',
 		name: 'lookupFrom',
@@ -205,43 +177,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Shard Key',
-		name: 'shardKey',
-		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
-		default: 'null',
-		type: 'json',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPointsGroups'],
-			},
-		},
-	},
-	{
-		displayName: 'Consistency',
-		name: 'consistency',
-		hint: 'Define read consistency guarantees for the operation',
-		default: 'majority',
-		type: 'string',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPointsGroups'],
-			},
-		},
-	},
-	{
-		displayName: 'Timeout',
-		name: 'timeout',
-		hint: 'If set, overrides global timeout for this request. Unit is seconds',
-		default: 100,
-		type: 'number',
-		required: false,
-		displayOptions: {
-			show: {
-				operation: ['queryPointsGroups'],
-			},
-		},
-	},
+	shardKeyField('queryPointsGroups'),
+	consistencyField('queryPointsGroups'),
+	timeoutField('queryPointsGroups'),
 ];
