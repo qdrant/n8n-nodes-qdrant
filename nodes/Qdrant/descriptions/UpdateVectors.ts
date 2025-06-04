@@ -28,7 +28,7 @@ export const updateVectorsFields: INodeProperties[] = [
 		displayName: 'Points',
 		name: 'points',
 		hint: 'List of points with their vectors to update. Each point should have id and vector(s)',
-		default: '[]',
+		default: "[\n    {\n        \"id\": 0,\n        \"vector\": [\n            0.9,\n            0.1,\n            0.1\n        ]\n    },\n    {\n        \"id\": 1,\n        \"vector\": [\n            0.1,\n            0.9,\n            0.1\n        ]\n    }\n]",
 		type: 'json',
 		required: true,
 		displayOptions: {

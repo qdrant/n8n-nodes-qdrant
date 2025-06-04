@@ -110,8 +110,22 @@ export const consistencyField = (showOperation: string): INodeProperties => {
 		displayName: 'Consistency',
 		name: 'consistency',
 		hint: 'Define read consistency guarantees for the operation',
+		type: 'options',
+		options: [
+			{
+				name: 'Majority',
+				value: 'majority',
+			},
+			{
+				name: 'Quorum',
+				value: 'quorum',
+			},
+			{
+				name: 'All',
+				value: 'all',
+			},
+		],
 		default: 'majority',
-		type: 'string',
 		displayOptions: {
 			show: {
 				operation: [showOperation],
