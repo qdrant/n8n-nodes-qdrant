@@ -60,8 +60,9 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'Query',
 		name: 'query',
-		description: 'Query to perform. Can be a vector, ID, or complex query object.',
-		default: 'null',
+		description:
+			'Query to perform. Can be a vector, ID, or complex query object (recommend, fusion, sample, formula).',
+		default: '[0.532, 0.953, 0.123]',
 		type: 'json',
 		displayOptions: {
 			show: {
