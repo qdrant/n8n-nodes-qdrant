@@ -1,5 +1,4 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField } from './Commons';
 
 export const collectionExistsOperation: INodePropertyOptions = {
 	name: 'Check Collection Exists',
@@ -14,4 +13,18 @@ export const collectionExistsOperation: INodePropertyOptions = {
 	},
 };
 
-export const collectionExistsFields: INodeProperties[] = [collectionNameField('collectionExists')];
+export const collectionExistsFields: INodeProperties[] = [
+	{
+		displayName: 'Collection Name',
+		name: 'collectionName',
+		type: 'string',
+		required: true,
+		displayOptions: {
+			show: {
+				operation: ['collectionExists'],
+			},
+		},
+		default: '',
+		description: 'Name of the collection',
+	},
+];

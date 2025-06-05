@@ -55,7 +55,8 @@ import {
 	createPayloadIndexFields,
 	deletePayloadIndexOperation,
 	deletePayloadIndexFields,
-} from './descriptions';
+} from './Descriptions';
+import { listSearch } from './Descriptions/utils';
 
 const inputs = [NodeConnectionType.Main];
 const outputs = [NodeConnectionType.Main];
@@ -94,10 +95,6 @@ export class Qdrant implements INodeType {
 				type: 'options',
 				noDataExpression: true,
 				options: [
-					{
-						name: 'Batch',
-						value: 'batch',
-					},
 					{
 						name: 'Collection',
 						value: 'collection',
@@ -248,5 +245,9 @@ export class Qdrant implements INodeType {
 			...matrixPairsFields,
 			...matrixOffsetsFields,
 		],
+	};
+
+	methods = {
+		listSearch,
 	};
 }

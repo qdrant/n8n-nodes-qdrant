@@ -1,5 +1,4 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
-import { collectionNameField } from './Commons';
 
 export const createCollectionOperation: INodePropertyOptions = {
 	name: 'Create Collection',
@@ -30,7 +29,19 @@ export const createCollectionOperation: INodePropertyOptions = {
 };
 
 export const createCollectionFields: INodeProperties[] = [
-	collectionNameField('createCollection'),
+	{
+		displayName: 'Collection Name',
+		name: 'collectionName',
+		type: 'string',
+		required: true,
+		displayOptions: {
+			show: {
+				operation: ['createCollection'],
+			},
+		},
+		default: '',
+		description: 'Name of the collection',
+	},
 	{
 		displayName: 'Vectors',
 		name: 'vectors',
@@ -60,8 +71,18 @@ export const createCollectionFields: INodeProperties[] = [
 		displayName: 'Sharding Method',
 		name: 'shardingMethod',
 		description: 'Sharding method to use. "auto" or "custom". Defaults to "auto"',
-		default: '',
-		type: 'string',
+		type: 'options',
+		options: [
+			{
+				name: 'Auto',
+				value: 'auto',
+			},
+			{
+				name: 'Custom',
+				value: 'custom',
+			},
+		],
+		default: 'auto',
 		displayOptions: {
 			show: {
 				operation: ['createCollection'],

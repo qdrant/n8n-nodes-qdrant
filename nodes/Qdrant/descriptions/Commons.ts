@@ -3,16 +3,32 @@ import { INodeProperties } from 'n8n-workflow';
 export const collectionNameField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'Collection Name',
+		description: 'Name of the collection',
 		name: 'collectionName',
-		type: 'string',
-		required: true,
+		type: 'resourceLocator',
+		default: { mode: 'list', value: null },
 		displayOptions: {
 			show: {
 				operation: [showOperation],
 			},
 		},
-		default: '',
-		description: 'Name of the collection',
+		modes: [
+			{
+				displayName: 'From List',
+				name: 'list',
+				type: 'list',
+				typeOptions: {
+					searchListMethod: 'listCollections',
+					searchable: true,
+				},
+			},
+			{
+				displayName: 'By Name',
+				name: 'name',
+				type: 'string',
+			},
+		],
+		required: true,
 	};
 };
 

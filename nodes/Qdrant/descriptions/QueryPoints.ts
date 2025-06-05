@@ -47,7 +47,7 @@ export const queryPointsFields: INodeProperties[] = [
 		name: 'query',
 		description:
 			'Query to perform. Can be a vector, ID, or complex query object (recommend, fusion, sample, formula).',
-		default: '{}',
+		default: '[0.532, 0.953, 0.123]',
 		type: 'json',
 		required: true,
 		displayOptions: {
