@@ -31,6 +31,7 @@ The node supports the following operations:
 - [Delete Points](https://api.qdrant.tech/v-1-14-x/api-reference/points/delete-points) - Remove points from a collection
 - [Count Points](https://api.qdrant.tech/v-1-14-x/api-reference/points/count-points) - Count points in a collection with optional filtering
 - [Scroll Points](https://api.qdrant.tech/v-1-14-x/api-reference/points/scroll-points) - Scroll through all points in a collection
+- [Batch Update Points](https://api.qdrant.tech/v-1-14-x/api-reference/points/batch-update) - Perform multiple point operations in a single request
 
 ### Vector Operations
 
@@ -51,10 +52,6 @@ The node supports the following operations:
 - [Payload Facets](https://api.qdrant.tech/v-1-14-x/api-reference/points/facet) - Get payload field statistics
 - [Create Payload Index](https://api.qdrant.tech/v-1-14-x/api-reference/indexes/create-field-index) - Create an index for payload fields
 - [Delete Payload Index](https://api.qdrant.tech/v-1-14-x/api-reference/indexes/delete-field-index) - Remove a payload field index
-
-### Batch Operations
-
-- [Batch Update Points](https://api.qdrant.tech/v-1-14-x/api-reference/points/batch-update) - Perform multiple operations in a single request
 
 ## Credentials
 
