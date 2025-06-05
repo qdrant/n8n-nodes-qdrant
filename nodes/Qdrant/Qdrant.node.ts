@@ -55,8 +55,8 @@ import {
 	createPayloadIndexFields,
 	deletePayloadIndexOperation,
 	deletePayloadIndexFields,
-} from './Descriptions';
-import { listSearch } from './Descriptions/utils';
+} from './descriptions';
+import { listSearch } from './descriptions/utils';
 
 const inputs = [NodeConnectionType.Main];
 const outputs = [NodeConnectionType.Main];
