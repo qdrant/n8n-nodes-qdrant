@@ -34,7 +34,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Vectors',
 		name: 'vectors',
-		hint: 'Vector parameters of the collection',
+		description: 'Vector parameters of the collection',
 		default: '{}',
 		type: 'json',
 		required: true,
@@ -47,7 +47,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Shard Number',
 		name: 'shardNumber',
-		hint: 'Number of shards in collection',
+		description: 'Number of shards in collection',
 		default: null,
 		type: 'number',
 		displayOptions: {
@@ -59,7 +59,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Sharding Method',
 		name: 'shardingMethod',
-		hint: 'Sharding method to use. "auto" or "custom". Defaults to "auto"',
+		description: 'Sharding method to use. "auto" or "custom". Defaults to "auto"',
 		default: '',
 		type: 'string',
 		displayOptions: {
@@ -71,7 +71,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Replication Factor',
 		name: 'replicationFactor',
-		hint: 'Number of shards replicas. Default is 1 Minimum is 1',
+		description: 'Number of shards replicas. Default is 1 Minimum is 1.',
 		default: null,
 		type: 'number',
 		displayOptions: {
@@ -83,7 +83,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Write Consistency Factor',
 		name: 'writeConsistencyFactor',
-		hint: 'Defines how many replicas should apply the operation for us to consider it successful.',
+		description: 'Defines how many replicas should apply the operation for us to consider it successful',
 		default: null,
 		type: 'number',
 		displayOptions: {
@@ -95,7 +95,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'On Disk Payload',
 		name: 'onDiskPayload',
-		hint: 'If true - point’s payload will not be stored in memory. It will be read from the disk every time it is requested.',
+		description: 'Whether to store point’s payload on disk. It will be read from the disk every time it is requested.',
 		default: false,
 		type: 'boolean',
 		displayOptions: {
@@ -107,7 +107,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'HNSW Config',
 		name: 'hnswConfig',
-		hint: 'Custom params for HNSW index.',
+		description: 'Custom params for HNSW index',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -119,7 +119,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'WAL Config',
 		name: 'walConfig',
-		hint: 'Custom params for WAL.',
+		description: 'Custom params for WAL',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -131,7 +131,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Optimizers Config',
 		name: 'optimizersConfig',
-		hint: 'Custom params for Optimizers.',
+		description: 'Custom params for Optimizers',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -143,7 +143,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Init From',
 		name: 'initFrom',
-		hint: 'Specify other collection to copy data from.',
+		description: 'Specify other collection to copy data from',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -155,7 +155,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Quantization Config',
 		name: 'quantizationConfig',
-		hint: 'Quantization parameters. If none - quantization is disabled.',
+		description: 'Quantization parameters. If none - quantization is disabled.',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -167,7 +167,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Sparse Vectors',
 		name: 'sparseVectors',
-		hint: 'Sparse vector parameters of the collection',
+		description: 'Sparse vector parameters of the collection',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -179,7 +179,7 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Strict Mode Config',
 		name: 'strictModeConfig',
-		hint: 'Strict mode configuration of the collection.',
+		description: 'Strict mode configuration of the collection',
 		default: 'null',
 		type: 'json',
 		displayOptions: {

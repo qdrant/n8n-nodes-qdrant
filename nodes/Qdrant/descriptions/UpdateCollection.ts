@@ -28,7 +28,7 @@ export const updateCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Vectors',
 		name: 'vectors',
-		hint: 'Vector parameters to update for each named vector',
+		description: 'Vector parameters to update for each named vector',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -40,7 +40,7 @@ export const updateCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Optimizers Config',
 		name: 'optimizersConfig',
-		hint: 'Custom params for Optimizers. If none - it is left unchanged',
+		description: 'Custom params for Optimizers. If none - it is left unchanged.',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -52,7 +52,7 @@ export const updateCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Params',
 		name: 'params',
-		hint: 'Collection base params. If none - it is left unchanged',
+		description: 'Collection base params. If none - it is left unchanged.',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -64,7 +64,7 @@ export const updateCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'HNSW Config',
 		name: 'hnswConfig',
-		hint: 'HNSW parameters to update for the collection index. If none - it is left unchanged',
+		description: 'HNSW parameters to update for the collection index. If none - it is left unchanged.',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -76,7 +76,7 @@ export const updateCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Quantization Config',
 		name: 'quantizationConfig',
-		hint: 'Quantization parameters to update. If none - it is left unchanged',
+		description: 'Quantization parameters to update. If none - it is left unchanged.',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -88,7 +88,7 @@ export const updateCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Sparse Vectors',
 		name: 'sparseVectors',
-		hint: 'Sparse vector parameters to update for each sparse vector',
+		description: 'Sparse vector parameters to update for each sparse vector',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -100,7 +100,7 @@ export const updateCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Strict Mode Config',
 		name: 'strictModeConfig',
-		hint: 'Strict mode configuration to update',
+		description: 'Strict mode configuration to update',
 		default: 'null',
 		type: 'json',
 		displayOptions: {

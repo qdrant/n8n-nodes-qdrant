@@ -35,7 +35,7 @@ export const deleteVectorsFields: INodeProperties[] = [
 	{
 		displayName: 'Vector',
 		name: 'vector',
-		hint: 'List of vector names to delete',
+		description: 'List of vector names to delete',
 		default: '[]',
 		type: 'json',
 		required: true,
@@ -48,7 +48,7 @@ export const deleteVectorsFields: INodeProperties[] = [
 	{
 		displayName: 'Points',
 		name: 'points',
-		hint: 'List of point IDs to delete vectors from',
+		description: 'List of point IDs to delete vectors from',
 		default: '[]',
 		type: 'json',
 		displayOptions: {

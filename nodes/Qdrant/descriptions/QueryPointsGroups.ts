@@ -47,7 +47,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'Group By',
 		name: 'groupBy',
-		hint: 'Payload field to group by, must be a string or number field',
+		description: 'Payload field to group by, must be a string or number field',
 		default: '',
 		type: 'string',
 		required: true,
@@ -60,7 +60,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'Query',
 		name: 'query',
-		hint: 'Query to perform. Can be a vector, ID, or complex query object',
+		description: 'Query to perform. Can be a vector, ID, or complex query object.',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -72,7 +72,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'Using',
 		name: 'using',
-		hint: 'Define which vector name to use for querying',
+		description: 'Define which vector name to use for querying',
 		default: '',
 		type: 'string',
 		displayOptions: {
@@ -85,7 +85,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'Params',
 		name: 'params',
-		hint: 'Search params for when there is no prefetch',
+		description: 'Search params for when there is no prefetch',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -97,7 +97,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'Score Threshold',
 		name: 'scoreThreshold',
-		hint: 'Return points with scores better than this threshold',
+		description: 'Return points with scores better than this threshold',
 		default: null,
 		type: 'number',
 		displayOptions: {
@@ -111,7 +111,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'Lookup From',
 		name: 'lookupFrom',
-		hint: 'The location to use for IDs lookup',
+		description: 'The location to use for IDs lookup',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -123,7 +123,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'Group Size',
 		name: 'groupSize',
-		hint: 'Maximum amount of points to return per group',
+		description: 'Maximum amount of points to return per group',
 		default: 3,
 		type: 'number',
 		displayOptions: {
@@ -135,7 +135,6 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'Limit',
 		name: 'limit',
-		hint: 'Maximum amount of groups to return',
 		default: 50,
 		type: 'number',
 		typeOptions: {
@@ -151,7 +150,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'With Lookup',
 		name: 'withLookup',
-		hint: 'Look for points in another collection using the group ids',
+		description: 'Look for points in another collection using the group IDs',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -163,7 +162,7 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'Prefetch',
 		name: 'prefetch',
-		hint: 'Sub-requests to perform first. If present, the query will be performed on the results of the prefetch(es)',
+		description: 'Sub-requests to perform first. If present, the query will be performed on the results of the prefetch(es).',
 		default: 'null',
 		type: 'json',
 		displayOptions: {

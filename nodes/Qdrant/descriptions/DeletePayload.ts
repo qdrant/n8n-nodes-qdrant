@@ -35,7 +35,7 @@ export const deletePayloadFields: INodeProperties[] = [
 	{
 		displayName: 'Keys',
 		name: 'keys',
-		hint: 'List of payload keys to remove from payload',
+		description: 'List of payload keys to remove from payload',
 		default: '[]',
 		type: 'json',
 		required: true,
@@ -48,7 +48,7 @@ export const deletePayloadFields: INodeProperties[] = [
 	{
 		displayName: 'Points',
 		name: 'points',
-		hint: 'List of point IDs to delete payload keys from',
+		description: 'List of point IDs to delete payload keys from',
 		default: '[]',
 		type: 'json',
 		displayOptions: {

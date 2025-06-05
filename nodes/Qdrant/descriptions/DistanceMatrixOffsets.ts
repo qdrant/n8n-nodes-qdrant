@@ -38,7 +38,7 @@ export const matrixOffsetsFields: INodeProperties[] = [
 	{
 		displayName: 'Sample',
 		name: 'sample',
-		hint: 'How many points to select and search within',
+		description: 'How many points to select and search within',
 		default: 10,
 		type: 'number',
 		displayOptions: {
@@ -50,7 +50,6 @@ export const matrixOffsetsFields: INodeProperties[] = [
 	{
 		displayName: 'Limit',
 		name: 'limit',
-		hint: 'How many neighbours per sample to find',
 		default: 50,
 		type: 'number',
 		typeOptions: {
@@ -66,7 +65,7 @@ export const matrixOffsetsFields: INodeProperties[] = [
 	{
 		displayName: 'Using',
 		name: 'using',
-		hint: 'Define which vector name to use for querying. If missing, the default vector is used',
+		description: 'Define which vector name to use for querying. If missing, the default vector is used.',
 		default: '',
 		type: 'string',
 		displayOptions: {

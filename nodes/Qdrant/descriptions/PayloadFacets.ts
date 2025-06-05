@@ -36,7 +36,7 @@ export const payloadFacetsFields: INodeProperties[] = [
 	{
 		displayName: 'Key',
 		name: 'key',
-		hint: 'Payload key to use for faceting',
+		description: 'Payload key to use for faceting',
 		default: '',
 		type: 'string',
 		required: true,
@@ -50,13 +50,12 @@ export const payloadFacetsFields: INodeProperties[] = [
 	{
 		displayName: 'Limit',
 		name: 'limit',
-		hint: 'Max number of hits to return',
+		description: 'Max number of results to return',
 		default: 50,
 		type: 'number',
 		typeOptions: {
 			minValue: 1,
 		},
-		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
 				operation: ['payloadFacets'],
@@ -66,7 +65,7 @@ export const payloadFacetsFields: INodeProperties[] = [
 	{
 		displayName: 'Exact',
 		name: 'exact',
-		hint: 'Whether to do a more expensive exact count for each of the values in the facet',
+		description: 'Whether to do a more expensive exact count for each of the values in the facet',
 		default: false,
 		type: 'boolean',
 		displayOptions: {

@@ -36,7 +36,7 @@ export const retrievePointsFields: INodeProperties[] = [
 	{
 		displayName: 'IDs',
 		name: 'ids',
-		hint: 'List of point IDs to retrieve',
+		description: 'List of point IDs to retrieve',
 		default: '[]',
 		type: 'json',
 		required: true,

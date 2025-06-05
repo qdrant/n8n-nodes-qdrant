@@ -19,7 +19,7 @@ export const retrievePointFields: INodeProperties[] = [
 	{
 		displayName: 'Point ID',
 		name: 'id',
-		hint: 'ID of the point',
+		description: 'ID of the point',
 		default: '',
 		type: 'string',
 		required: true,

@@ -12,7 +12,7 @@ export const collectionNameField = (showOperation: string): INodeProperties => {
 			},
 		},
 		default: '',
-		hint: 'Name of the collection',
+		description: 'Name of the collection',
 	};
 };
 
@@ -20,7 +20,7 @@ export const orderingField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'Ordering',
 		name: 'ordering',
-		hint: 'Defines ordering guarantees for the operation',
+		description: 'Defines ordering guarantees for the operation',
 		type: 'options',
 		options: [
 			{
@@ -49,7 +49,7 @@ export const filterField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'Filter',
 		name: 'filter',
-		hint: 'Only select points which satisfies these conditions',
+		description: 'Only select points which satisfies these conditions',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -64,7 +64,7 @@ export const withPayloadField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'With Payload',
 		name: 'withPayload',
-		hint: 'Whether to include payload in the response',
+		description: 'Whether to include payload in the response',
 		default: true,
 		type: 'boolean',
 		displayOptions: {
@@ -79,7 +79,7 @@ export const withVectorField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'With Vector',
 		name: 'withVector',
-		hint: 'Whether to include vectors in the response',
+		description: 'Whether to include vectors in the response',
 		default: false,
 		type: 'boolean',
 		displayOptions: {
@@ -94,7 +94,7 @@ export const shardKeyField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'Shard Key',
 		name: 'shardKey',
-		hint: 'Specify in which shards to look for the points, if not specified - look in all shards',
+		description: 'Specify in which shards to look for the points, if not specified - look in all shards',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -109,7 +109,7 @@ export const consistencyField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'Consistency',
 		name: 'consistency',
-		hint: 'Define read consistency guarantees for the operation',
+		description: 'Define read consistency guarantees for the operation',
 		type: 'options',
 		options: [
 			{
@@ -138,7 +138,7 @@ export const timeoutField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'Timeout',
 		name: 'timeout',
-		hint: 'If set, overrides global timeout for this request. Unit is seconds',
+		description: 'If set, overrides global timeout for this request. Unit is seconds.',
 		default: 100,
 		type: 'number',
 		displayOptions: {
@@ -153,7 +153,7 @@ export const waitField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'Wait',
 		name: 'wait',
-		hint: 'If true, wait for changes to actually happen',
+		description: 'Whether towait for changes to actually happen',
 		default: true,
 		type: 'boolean',
 		displayOptions: {

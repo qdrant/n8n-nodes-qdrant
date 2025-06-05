@@ -45,7 +45,7 @@ export const queryPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Query',
 		name: 'query',
-		hint: 'Query to perform. Can be a vector, ID, or complex query object (recommend, fusion, sample, formula)',
+		description: 'Query to perform. Can be a vector, ID, or complex query object (recommend, fusion, sample, formula).',
 		default: '{}',
 		type: 'json',
 		required: true,
@@ -58,7 +58,7 @@ export const queryPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Score Threshold',
 		name: 'scoreThreshold',
-		hint: 'Return points with scores better than this threshold',
+		description: 'Return points with scores better than this threshold',
 		default: 0,
 		type: 'number',
 		displayOptions: {
@@ -70,13 +70,12 @@ export const queryPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Limit',
 		name: 'limit',
-		hint: 'Max number of points to return',
+		description: 'Max number of results to return',
 		default: 50,
 		type: 'number',
 		typeOptions: {
 			minValue: 1,
 		},
-		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
 				operation: ['queryPoints'],
@@ -86,7 +85,7 @@ export const queryPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Offset',
 		name: 'offset',
-		hint: 'Offset of the result. Skip this many points',
+		description: 'Offset of the result. Skip this many points.',
 		default: 0,
 		type: 'number',
 		displayOptions: {
@@ -100,7 +99,7 @@ export const queryPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Using',
 		name: 'using',
-		hint: 'Define which vector name to use for querying',
+		description: 'Define which vector name to use for querying',
 		default: '',
 		type: 'string',
 		displayOptions: {
@@ -113,7 +112,7 @@ export const queryPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Prefetch',
 		name: 'prefetch',
-		hint: 'Sub-requests to perform first. If present, the query will be performed on the results of the prefetch(es)',
+		description: 'Sub-requests to perform first. If present, the query will be performed on the results of the prefetch(es).',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -125,7 +124,7 @@ export const queryPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Params',
 		name: 'params',
-		hint: 'Search params for when there is no prefetch',
+		description: 'Search params for when there is no prefetch',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -137,7 +136,7 @@ export const queryPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Lookup From',
 		name: 'lookupFrom',
-		hint: 'The location to use for IDs lookup',
+		description: 'The location to use for IDs lookup',
 		default: 'null',
 		type: 'json',
 		displayOptions: {

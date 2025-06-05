@@ -23,7 +23,7 @@ export const deletePayloadIndexFields: INodeProperties[] = [
 	{
 		displayName: 'Field Name',
 		name: 'fieldName',
-		hint: 'Name of the field where to delete the index',
+		description: 'Name of the field where to delete the index',
 		default: '',
 		type: 'string',
 		required: true,

@@ -27,7 +27,7 @@ export const createPayloadIndexFields: INodeProperties[] = [
 	{
 		displayName: 'Field Name',
 		name: 'fieldName',
-		hint: 'Name of the field to create index for',
+		description: 'Name of the field to create index for',
 		default: '',
 		type: 'string',
 		required: true,
@@ -40,7 +40,7 @@ export const createPayloadIndexFields: INodeProperties[] = [
 	{
 		displayName: 'Field Schema',
 		name: 'fieldSchema',
-		hint: 'Schema of the field to create index for.',
+		description: 'Schema of the field to create index for',
 		default: '{}',
 		type: 'json',
 		required: true,

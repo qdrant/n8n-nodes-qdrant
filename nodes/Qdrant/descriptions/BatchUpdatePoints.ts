@@ -26,7 +26,7 @@ export const batchUpdatePointsFields: INodeProperties[] = [
 	{
 		displayName: 'Operations',
 		name: 'operations',
-		hint: 'List of operations to perform. Can include upsert, update_vectors, set_payload, delete_payload, delete_vectors, and clear_payload operations',
+		description: 'List of operations to perform. Can include upsert, update_vectors, set_payload, delete_payload, delete_vectors, and clear_payload operations.',
 		default: '[]',
 		type: 'json',
 		required: true,

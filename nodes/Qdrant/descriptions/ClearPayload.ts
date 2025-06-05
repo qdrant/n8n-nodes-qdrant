@@ -34,7 +34,7 @@ export const clearPayloadFields: INodeProperties[] = [
 	{
 		displayName: 'Points',
 		name: 'points',
-		hint: 'List of point IDs to clear payload from',
+		description: 'List of point IDs to clear payload from',
 		default: '[]',
 		type: 'json',
 		displayOptions: {
