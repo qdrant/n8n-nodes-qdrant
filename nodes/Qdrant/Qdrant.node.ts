@@ -172,10 +172,7 @@ export class Qdrant implements INodeType {
 						resource: ['vector'],
 					},
 				},
-				options: [
-					updateVectorsOperation,
-					deleteVectorsOperation,
-				],
+				options: [updateVectorsOperation, deleteVectorsOperation],
 				default: '',
 			},
 			{

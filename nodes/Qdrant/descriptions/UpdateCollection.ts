@@ -64,7 +64,8 @@ export const updateCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'HNSW Config',
 		name: 'hnswConfig',
-		description: 'HNSW parameters to update for the collection index. If none - it is left unchanged.',
+		description:
+			'HNSW parameters to update for the collection index. If none - it is left unchanged.',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -109,4 +110,4 @@ export const updateCollectionFields: INodeProperties[] = [
 			},
 		},
 	},
-]; 
+];

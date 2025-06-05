@@ -26,8 +26,10 @@ export const upsertPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Points',
 		name: 'points',
-		description: 'List of points to upsert. Each point should have ID, vector, and optional payload.',
-		default: '[\n    {\n        \"id\": 0,\n        \"payload\": {\n            \"color\": \"red\",\n            \"age\": 32\n        },\n        \"vector\": [\n            0.9,\n            0.1,\n            0.1\n        ]\n    },\n    {\n        \"id\": 1,\n        \"payload\": {\n            \"color\": \"green\",\n            \"age\": 55\n        },\n        \"vector\": [\n            0.1,\n            0.9,\n            0.1\n        ]\n    }\n]',
+		description:
+			'List of points to upsert. Each point should have ID, vector, and optional payload.',
+		default:
+			'[\n    {\n        "id": 0,\n        "payload": {\n            "color": "red",\n            "age": 32\n        },\n        "vector": [\n            0.9,\n            0.1,\n            0.1\n        ]\n    },\n    {\n        "id": 1,\n        "payload": {\n            "color": "green",\n            "age": 55\n        },\n        "vector": [\n            0.1,\n            0.9,\n            0.1\n        ]\n    }\n]',
 		type: 'json',
 		required: true,
 		displayOptions: {

@@ -162,7 +162,8 @@ export const queryPointsGroupsFields: INodeProperties[] = [
 	{
 		displayName: 'Prefetch',
 		name: 'prefetch',
-		description: 'Sub-requests to perform first. If present, the query will be performed on the results of the prefetch(es).',
+		description:
+			'Sub-requests to perform first. If present, the query will be performed on the results of the prefetch(es).',
 		default: 'null',
 		type: 'json',
 		displayOptions: {

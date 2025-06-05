@@ -26,7 +26,8 @@ export const queryBatchPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Searches',
 		name: 'searches',
-		description: 'List of search requests to perform in batch. Each request can be a vector search, ID search, or complex query.',
+		description:
+			'List of search requests to perform in batch. Each request can be a vector search, ID search, or complex query.',
 		default: '[]',
 		type: 'json',
 		required: true,

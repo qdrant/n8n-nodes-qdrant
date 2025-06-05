@@ -45,7 +45,8 @@ export const queryPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Query',
 		name: 'query',
-		description: 'Query to perform. Can be a vector, ID, or complex query object (recommend, fusion, sample, formula).',
+		description:
+			'Query to perform. Can be a vector, ID, or complex query object (recommend, fusion, sample, formula).',
 		default: '{}',
 		type: 'json',
 		required: true,
@@ -112,7 +113,8 @@ export const queryPointsFields: INodeProperties[] = [
 	{
 		displayName: 'Prefetch',
 		name: 'prefetch',
-		description: 'Sub-requests to perform first. If present, the query will be performed on the results of the prefetch(es).',
+		description:
+			'Sub-requests to perform first. If present, the query will be performed on the results of the prefetch(es).',
 		default: 'null',
 		type: 'json',
 		displayOptions: {

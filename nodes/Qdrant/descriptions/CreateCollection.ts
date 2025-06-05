@@ -83,7 +83,8 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'Write Consistency Factor',
 		name: 'writeConsistencyFactor',
-		description: 'Defines how many replicas should apply the operation for us to consider it successful',
+		description:
+			'Defines how many replicas should apply the operation for us to consider it successful',
 		default: null,
 		type: 'number',
 		displayOptions: {
@@ -95,7 +96,8 @@ export const createCollectionFields: INodeProperties[] = [
 	{
 		displayName: 'On Disk Payload',
 		name: 'onDiskPayload',
-		description: 'Whether to store point’s payload on disk. It will be read from the disk every time it is requested.',
+		description:
+			'Whether to store point’s payload on disk. It will be read from the disk every time it is requested.',
 		default: false,
 		type: 'boolean',
 		displayOptions: {

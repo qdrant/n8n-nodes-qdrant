@@ -94,7 +94,8 @@ export const shardKeyField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'Shard Key',
 		name: 'shardKey',
-		description: 'Specify in which shards to look for the points, if not specified - look in all shards',
+		description:
+			'Specify in which shards to look for the points, if not specified - look in all shards',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
