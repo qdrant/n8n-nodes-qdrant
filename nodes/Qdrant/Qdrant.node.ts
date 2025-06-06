@@ -78,7 +78,7 @@ export class Qdrant implements INodeType {
 		outputs,
 		credentials: [
 			{
-				name: 'qdrantApi',
+				name: 'qdrantRestApi',
 				required: true,
 			},
 		],

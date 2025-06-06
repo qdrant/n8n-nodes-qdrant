@@ -15,7 +15,7 @@ interface QdrantCollectionsResponse {
 export const listSearch = {
 	async listCollections(this: ILoadOptionsFunctions): Promise<INodeListSearchResult> {
 		try {
-			const creds = await this.getCredentials('qdrantApi');
+			const creds = await this.getCredentials('qdrantRestApi');
 
 			const response = (await this.helpers.httpRequest.call(this, {
 				method: 'GET',

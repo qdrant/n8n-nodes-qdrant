@@ -7,7 +7,7 @@ import {
 } from 'n8n-workflow';
 
 export class QdrantApi implements ICredentialType {
-	name = 'qdrantApi';
+	name = 'qdrantRestApi';
 	displayName = 'Qdrant API';
 	icon: Icon = 'file:qdrant.svg';
 	documentationUrl = 'https://qdrant.tech/documentation/cloud/authentication/';

@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-qdrant",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Official n8n node to interface with Qdrant - https://qdrant.tech",
   "keywords": [
     "n8n-community-node-package"
