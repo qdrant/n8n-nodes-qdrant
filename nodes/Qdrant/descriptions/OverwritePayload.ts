@@ -21,7 +21,7 @@ export const overwritePayloadOperation: INodePropertyOptions = {
 				points: '={{JSON.parse($parameter.points)}}',
 				filter: '={{JSON.parse($parameter.filter)}}',
 				shard_key: '={{JSON.parse($parameter.shardKey)}}',
-				key: '={{$parameter.key}}',
+				key: '={{$parameter.key ? $parameter.key : null}}',
 			},
 			qs: {
 				wait: '={{$parameter.wait}}',
