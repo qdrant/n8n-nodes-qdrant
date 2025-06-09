@@ -20,15 +20,16 @@ export class QdrantApi implements ICredentialType {
 				password: true,
 			},
 			default: '',
-			required: true,
+			required: false,
+			description: 'Optional API key to use for authentication',
 		},
 		{
-			displayName: 'URL',
+			displayName: 'REST URL',
 			name: 'url',
 			type: 'string',
 			default: 'http://localhost:6333',
 			required: true,
-			description: 'Qdrant server URL',
+			description: 'The REST URL of the Qdrant instance to connect to',
 		},
 	];
 	authenticate: IAuthenticateGeneric = {

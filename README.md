@@ -14,7 +14,7 @@ Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes
 
 The node supports the following operations:
 
-### Collection Management
+### Collection
 
 - [List Collections](https://api.qdrant.tech/v-1-14-x/api-reference/collections/get-collections) - List all collections in the Qdrant instance
 - [Create Collection](https://api.qdrant.tech/v-1-14-x/api-reference/collections/create-collection) - Create a new collection with specified vector parameters
@@ -23,7 +23,7 @@ The node supports the following operations:
 - [Collection Exists](https://api.qdrant.tech/v-1-14-x/api-reference/collections/collection-exists) - Check if a collection exists
 - [Delete Collection](https://api.qdrant.tech/v-1-14-x/api-reference/collections/delete-collection) - Delete a collection
 
-### Point Operations
+### Point
 
 - [Upsert Points](https://api.qdrant.tech/v-1-14-x/api-reference/points/upsert-points) - Insert or update points in a collection
 - [Retrieve Point](https://api.qdrant.tech/v-1-14-x/api-reference/points/get-point) - Get a single point by ID
@@ -33,17 +33,20 @@ The node supports the following operations:
 - [Scroll Points](https://api.qdrant.tech/v-1-14-x/api-reference/points/scroll-points) - Scroll through all points in a collection
 - [Batch Update Points](https://api.qdrant.tech/v-1-14-x/api-reference/points/batch-update) - Perform multiple point operations in a single request
 
-### Vector Operations
+### Vector
 
 - [Update Vectors](https://api.qdrant.tech/v-1-14-x/api-reference/points/update-vectors) - Update vectors for existing points
 - [Delete Vectors](https://api.qdrant.tech/v-1-14-x/api-reference/points/delete-vectors) - Remove vectors from points
+
+### Search
+
 - [Query Points](https://api.qdrant.tech/v-1-14-x/api-reference/search/query-points) - Search for similar vectors
 - [Query Points In Batch](https://api.qdrant.tech/v-1-14-x/api-reference/search/query-batch-points) - Perform multiple vector searches in batch
 - [Query Points Groups](https://api.qdrant.tech/v-1-14-x/api-reference/search/query-points-groups) - Group search results by payload field
 - [Matrix Pairs](https://api.qdrant.tech/v-1-14-x/api-reference/search/matrix-pairs) - Calculate distance matrix between pairs of points
 - [Matrix Offsets](https://api.qdrant.tech/v-1-14-x/api-reference/search/matrix-offsets) - Calculate distance matrix using offsets
 
-### Payload Operations
+### Payload
 
 - [Set Payload](https://api.qdrant.tech/v-1-14-x/api-reference/points/set-payload) - Set payload for points
 - [Overwrite Payload](https://api.qdrant.tech/v-1-14-x/api-reference/points/overwrite-payload) - Replace entire payload for points
