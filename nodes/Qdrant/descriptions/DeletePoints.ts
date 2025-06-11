@@ -5,6 +5,7 @@ import {
 	shardKeyField,
 	waitField,
 	orderingField,
+	pointIdsField,
 } from './Commons';
 
 export const deletePointsOperation: INodePropertyOptions = {
@@ -31,18 +32,7 @@ export const deletePointsOperation: INodePropertyOptions = {
 
 export const deletePointsFields: INodeProperties[] = [
 	collectionNameField('deletePoints'),
-	{
-		displayName: 'Points',
-		name: 'points',
-		description: 'List of point IDs to delete',
-		default: '[]',
-		type: 'json',
-		displayOptions: {
-			show: {
-				operation: ['deletePoints'],
-			},
-		},
-	},
+	pointIdsField('deletePoints'),
 	filterField('deletePoints'),
 	shardKeyField('deletePoints'),
 	waitField('deletePoints'),

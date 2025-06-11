@@ -3,6 +3,7 @@ import {
 	collectionNameField,
 	filterField,
 	orderingField,
+	pointIdsField,
 	shardKeyField,
 	waitField,
 } from './Commons';
@@ -46,18 +47,7 @@ export const overwritePayloadFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Points',
-		name: 'points',
-		description: 'List of point IDs to overwrite payload for',
-		default: '[]',
-		type: 'json',
-		displayOptions: {
-			show: {
-				operation: ['overwritePayload'],
-			},
-		},
-	},
+	pointIdsField('overwritePayload'),
 	filterField('overwritePayload'),
 	{
 		displayName: 'Key',

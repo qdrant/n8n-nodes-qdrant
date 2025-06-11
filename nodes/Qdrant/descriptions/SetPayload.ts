@@ -3,6 +3,7 @@ import {
 	collectionNameField,
 	filterField,
 	orderingField,
+	pointIdsField,
 	shardKeyField,
 	waitField,
 } from './Commons';
@@ -46,18 +47,7 @@ export const setPayloadFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Points',
-		name: 'points',
-		description: 'List of point IDs to set payload for',
-		default: '[]',
-		type: 'json',
-		displayOptions: {
-			show: {
-				operation: ['setPayload'],
-			},
-		},
-	},
+	pointIdsField('setPayload'),
 	filterField('setPayload'),
 	{
 		displayName: 'Key',

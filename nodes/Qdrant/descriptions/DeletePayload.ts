@@ -3,6 +3,7 @@ import {
 	collectionNameField,
 	filterField,
 	orderingField,
+	pointIdsField,
 	shardKeyField,
 	waitField,
 } from './Commons';
@@ -45,18 +46,7 @@ export const deletePayloadFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Points',
-		name: 'points',
-		description: 'List of point IDs to delete payload keys from',
-		default: '[]',
-		type: 'json',
-		displayOptions: {
-			show: {
-				operation: ['deletePayload'],
-			},
-		},
-	},
+	pointIdsField('deletePayload'),
 	filterField('deletePayload'),
 	shardKeyField('deletePayload'),
 	waitField('deletePayload'),

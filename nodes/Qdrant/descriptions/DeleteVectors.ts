@@ -3,6 +3,7 @@ import {
 	collectionNameField,
 	filterField,
 	orderingField,
+	pointIdsField,
 	shardKeyField,
 	waitField,
 } from './Commons';
@@ -45,18 +46,7 @@ export const deleteVectorsFields: INodeProperties[] = [
 			},
 		},
 	},
-	{
-		displayName: 'Points',
-		name: 'points',
-		description: 'List of point IDs to delete vectors from',
-		default: '[]',
-		type: 'json',
-		displayOptions: {
-			show: {
-				operation: ['deleteVectors'],
-			},
-		},
-	},
+	pointIdsField('deleteVectors'),
 	filterField('deleteVectors'),
 	shardKeyField('deleteVectors'),
 	waitField('deleteVectors'),
