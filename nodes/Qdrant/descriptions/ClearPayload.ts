@@ -5,6 +5,7 @@ import {
 	shardKeyField,
 	waitField,
 	orderingField,
+	pointIdsField,
 } from './Commons';
 
 export const clearPayloadOperation: INodePropertyOptions = {
@@ -31,18 +32,7 @@ export const clearPayloadOperation: INodePropertyOptions = {
 
 export const clearPayloadFields: INodeProperties[] = [
 	collectionNameField('clearPayload'),
-	{
-		displayName: 'Points',
-		name: 'points',
-		description: 'List of point IDs to clear payload from',
-		default: '[]',
-		type: 'json',
-		displayOptions: {
-			show: {
-				operation: ['clearPayload'],
-			},
-		},
-	},
+	pointIdsField('clearPayload'),
 	filterField('clearPayload'),
 	shardKeyField('clearPayload'),
 	waitField('clearPayload'),

@@ -6,6 +6,7 @@ import {
 	shardKeyField,
 	consistencyField,
 	timeoutField,
+	pointIdsField,
 } from './Commons';
 
 export const retrievePointsOperation: INodePropertyOptions = {
@@ -18,7 +19,7 @@ export const retrievePointsOperation: INodePropertyOptions = {
 			method: 'POST',
 			url: '=/collections/{{$parameter.collectionName}}/points',
 			body: {
-				ids: '={{JSON.parse($parameter.ids)}}',
+				ids: '={{JSON.parse($parameter.points)}}',
 				with_payload: '={{$parameter.withPayload}}',
 				with_vector: '={{$parameter.withVector}}',
 				shard_key: '={{JSON.parse($parameter.shardKey)}}',
@@ -33,19 +34,7 @@ export const retrievePointsOperation: INodePropertyOptions = {
 
 export const retrievePointsFields: INodeProperties[] = [
 	collectionNameField('retrievePoints'),
-	{
-		displayName: 'IDs',
-		name: 'ids',
-		description: 'List of point IDs to retrieve',
-		default: '[]',
-		type: 'json',
-		required: true,
-		displayOptions: {
-			show: {
-				operation: ['retrievePoints'],
-			},
-		},
-	},
+	pointIdsField('retrievePoints'),
 	withPayloadField('retrievePoints'),
 	withVectorField('retrievePoints'),
 	shardKeyField('retrievePoints'),

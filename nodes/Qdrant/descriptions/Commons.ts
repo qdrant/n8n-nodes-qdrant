@@ -76,6 +76,20 @@ export const filterField = (showOperation: string): INodeProperties => {
 	};
 };
 
+export const pointIdsField = (showOperation: string): INodeProperties => {
+	return {
+		displayName: 'Point IDs',
+		name: 'points',
+		description: 'List of point IDs to select',
+		default: 'null',
+		type: 'json',
+		displayOptions: {
+			show: {
+				operation: [showOperation],
+			},
+		},
+	};
+};
 export const withPayloadField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'With Payload',
