@@ -1,9 +1,9 @@
 import type { INodeProperties, INodePropertyOptions } from 'n8n-workflow';
 
 export const collectionExistsOperation: INodePropertyOptions = {
-	name: 'Check Collection Exists',
+	name: 'Check If Collection Exists',
 	value: 'collectionExists',
-	action: 'Check Collection Exists',
+	action: 'Check If Collection Exists',
 	description: 'Check if a collection exists in the Qdrant instance',
 	routing: {
 		request: {
