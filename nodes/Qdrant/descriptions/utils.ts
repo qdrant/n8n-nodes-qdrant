@@ -39,7 +39,8 @@ export const listSearch = {
 				results: collections,
 			};
 		} catch (error) {
-			throw new Error(`Failed to list collections: ${error.message}`);
+			const errorMessage = error instanceof Error ? error.message : String(error);
+			throw new Error(`Failed to list collections: ${errorMessage}`);
 		}
 	},
 };

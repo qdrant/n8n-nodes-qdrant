@@ -73,7 +73,6 @@ export class Qdrant implements INodeType {
 		defaults: {
 			name: 'Qdrant',
 		},
-		usableAsTool: true,
 		inputs,
 		outputs,
 		credentials: [
