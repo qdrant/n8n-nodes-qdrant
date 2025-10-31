@@ -7,6 +7,7 @@ export const listCollectionsOperation: INodePropertyOptions = {
 	description: 'List all collections in the Qdrant instance',
 	routing: {
 		request: {
+			method: 'GET',
 			url: '/collections',
 		},
 	},

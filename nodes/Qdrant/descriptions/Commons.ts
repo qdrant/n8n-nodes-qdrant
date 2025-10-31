@@ -65,7 +65,7 @@ export const filterField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'Filter',
 		name: 'filter',
-		description: 'Only select points which satisfies these conditions',
+		description: 'Only select points that satisfy these conditions',
 		default: 'null',
 		type: 'json',
 		displayOptions: {
@@ -81,7 +81,7 @@ export const pointIdsField = (showOperation: string): INodeProperties => {
 		displayName: 'Point IDs',
 		name: 'points',
 		description: 'List of point IDs to select',
-		default: 'null',
+		default: '[]',
 		type: 'json',
 		displayOptions: {
 			show: {
@@ -184,7 +184,7 @@ export const waitField = (showOperation: string): INodeProperties => {
 	return {
 		displayName: 'Wait',
 		name: 'wait',
-		description: 'Whether towait for changes to actually happen',
+		description: 'Whether to wait for changes to actually happen',
 		default: true,
 		type: 'boolean',
 		displayOptions: {
