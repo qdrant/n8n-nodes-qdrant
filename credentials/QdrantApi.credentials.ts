@@ -3,12 +3,13 @@ import {
 	ICredentialType,
 	INodeProperties,
 	ICredentialTestRequest,
+	Icon,
 } from 'n8n-workflow';
 
 export class QdrantApi implements ICredentialType {
 	name = 'qdrantRestApi';
 	displayName = 'Qdrant API';
-	icon = 'file:qdrant.svg';
+	icon: Icon = 'file:qdrant.svg';
 	documentationUrl = 'https://qdrant.tech/documentation/cloud/authentication/';
 	properties: INodeProperties[] = [
 		{
