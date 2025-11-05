@@ -1,5 +1,5 @@
 /* eslint-disable n8n-nodes-base/node-param-operation-option-action-miscased */
-import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
+import { INodeType, INodeTypeDescription, NodeConnectionTypes } from 'n8n-workflow';
 import {
 	deleteCollectionOperation,
 	retrievePointOperation,
@@ -58,9 +58,6 @@ import {
 } from './descriptions';
 import { listSearch } from './descriptions/utils';
 
-const inputs = [NodeConnectionType.Main];
-const outputs = [NodeConnectionType.Main];
-
 export class Qdrant implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Qdrant',
@@ -73,8 +70,9 @@ export class Qdrant implements INodeType {
 		defaults: {
 			name: 'Qdrant',
 		},
-		inputs,
-		outputs,
+		usableAsTool: true,
+		inputs: [NodeConnectionTypes.Main],
+		outputs: [NodeConnectionTypes.Main],
 		credentials: [
 			{
 				name: 'qdrantRestApi',
